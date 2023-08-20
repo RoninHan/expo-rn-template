@@ -1,12 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+import { Provider } from "mobx-react"
+import stores from "./src/store"
+
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider rootStore={stores}>
+      <View style={styles.container}>
+        <Text>Open up App.tsx to start working on your app! hhh</Text>
+        <StatusBar style="auto" />
+      </View>
+    </Provider>
+
   );
 }
 
